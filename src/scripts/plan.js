@@ -13,8 +13,6 @@ export const createPlan = () => {
 
     return plan
 }
-const yearlyPlan = createPlan()
-console.log(yearlyPlan)
 
 
 /*
