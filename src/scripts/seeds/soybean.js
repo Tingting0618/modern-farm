@@ -1,11 +1,17 @@
+import { getPlants } from "../database.js"
+
+const plants = getPlants()
+
 export const createSoybean = () => {
-    // let citiesHTML = "<ul>"
+    let objList =[]
 
-    // for (const walker of walkers) {
-    //     citiesHTML += `<li>${walker.city}</li>`
-    // }
+    for (const i of plants) {
+        if (i.name === "Corn") {
+        objList.push(i)
+        }
+    }
 
-    // citiesHTML += "</ul>"
+//    obj += i
 
-    // return citiesHTML
+    return objList
 }
