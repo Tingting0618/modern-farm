@@ -5,6 +5,6 @@ const asparagusSeed = createAsparagus()
 console.log(asparagusSeed)
 
 const yearlyPlan = createPlan()
-//console.log(yearlyPlan)
+console.log(yearlyPlan)
 console.log("Welcome to the main module")
 
