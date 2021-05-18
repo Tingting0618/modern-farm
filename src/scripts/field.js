@@ -1,4 +1,4 @@
-
+//check if things works
 import { createPotato } from "./seeds/potato.js"
 import { createCorn } from "./seeds/corn.js"
 import { createAsparagus } from "./seeds/asparagus"
