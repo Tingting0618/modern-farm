@@ -1,58 +1,53 @@
 
 import { createPotato } from "./seeds/potato.js"
 import { createCorn } from "./seeds/corn.js"
-import { createAsparagus } from "./seeds/asparagus"
-import { createSoybean } from "./seeds/soybean"
-import { createSunflower } from "./seeds/sunflower"
-import { createWheat } from "./seeds/wheat"
+import { createAsparagus } from "./seeds/asparagus.js"
+import { createSoybean } from "./seeds/soybean.js"
+import { createSunflower } from "./seeds/sunflower.js"
+import { createWheat } from "./seeds/wheat.js"
 
-storePlant = []
+
+
 export const addPlant = (aSeed) => {
-    if (aSeed === potatoSeed) {
-        const potatoSeed = createPotato()
-        for (const i of potatoSeed) {
-            storePlant.push(i)
-            return storePlant
-        }
-    } else if (aSeed === cornSeed) {
-        const cornSeed = createCorn()
+    const storePlant = []
+    if (aSeed === "Potato") {
+        let potatoSeed = createPotato()
+
+        storePlant.push(potatoSeed)
+
+        return storePlant
+    }
+    else if (aSeed === "Corn") {
+        let cornSeed = createCorn()
         for (const i of cornSeed) {
             storePlant.push(i)
-            return storePlant
-        }
-    } else if (aSeed === asparagusSeed) {
-        const asparagusSeed = createAsparagus()
-        for (const i of asparagusSeed) {
-            storePlant.push(i)
-            return storePlant
+
         }
     }
-    else if (aSeed === soybeanSeed) {
-        const soybeanSeed = createSoybean()
-        for (const i of soybeanSeed) {
-            storePlant.push(i)
-            return storePlant
-        }
+    else if (aSeed === "Wheat") {
+        let wheatSeed = createWheat()
+        storePlant.push(wheatSeed)
     }
-    else if (aSeed === sunflowerSeed) {
-        const sunflowerSeed = createSunflower()
-        for (const i of sunflowerSeed) {
-            storePlant.push(i)
-            return storePlant
-        }
+
+    else if (aSeed === "Sunflower") {
+        let sunflowerSeed = createSunflower()
+        storePlant.push(sunflowerSeed)
+    }
+    else if (aSeed === "Asparagus") {
+        let asparagusSeed = createAsparagus()
+        storePlant.push(asparagusSeed)
+    }
+    else if (aSeed === "Soybean") {
+        let soybeanSeed = createSoybean()
+        storePlant.push(soybeanSeed)
     }
     else {
-        const wheatSeed = createWheat()
-        for (const i of wheatSeed) {
-            storePlant.push(i)
-            return storePlant
-        }
+        storePlant.push({ name: "seed not found"})
     }
-
+    return storePlant
 }
-addPlant(cornSeed)
-console.log(storePlant)
+
 
 export const usePlants = () => {
-    addPlant()
+    return []
 }

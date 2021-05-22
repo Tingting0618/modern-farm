@@ -6,7 +6,7 @@ export const createWheat = () => {
     let objList =[]
 
     for (const i of plants) {
-        if (i.name === "Corn") {
+        if (i.name === "Wheat") {
         objList.push(i)
         }
     }

@@ -24,3 +24,4 @@ const database = {
 export const getPlants = () => {
     return [...database.plants]
 }
+
